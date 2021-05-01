@@ -28,4 +28,22 @@
     </tr>
   </table>
 </form>
+<script>
+let sendButton = document.querySelector('button');
+
+function send() {
+  let name = document.querySelector('#nameValue').value;
+  let phone = document.querySelector('#phoneValue').value;
+  let demand = document.querySelector('#demandValue').value;
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbysUBneDD8dJvrtMEd6NpXLC_w2bg6-_0kkZpcGEcurbUmWnzz1QQ4cmqZIIlK0alo1/exec",
+    data: {
+        "name": name,
+        "phone": phone,
+        "demand": demand
+    },
+    success: function(response) {
+      if(response == "成功"){
+        alert("成功");
+  </script>
   </body></html>
